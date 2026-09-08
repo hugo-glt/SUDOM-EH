@@ -1,0 +1,17 @@
+# Rust (back/)
+back/target/
+back/Cargo.lock
+
+# Node (front/)
+front/node_modules/
+front/dist/
+front/.vite/
+
+# Éditeurs / OS
+.DS_Store
+.vscode/
+.idea/
+
+# direnv
+.envrc.local
+.direnv/

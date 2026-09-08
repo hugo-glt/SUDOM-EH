@@ -13,5 +13,5 @@ front/.vite/
 .idea/
 
 # direnv
-.envrc
+.envrc/
 .direnv/

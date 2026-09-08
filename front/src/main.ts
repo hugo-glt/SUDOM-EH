@@ -1,4 +1,4 @@
-import dictionnaireRaw from '@/data/data.csv?raw'
+import dictionnaireRaw from '@/data/noun.csv?raw';
 
 const lignes = dictionnaireRaw.split('\n').map(l => l.trim()).filter(Boolean)
 

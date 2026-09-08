@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import GameView from './views/GameView.vue'
 </script>
 
 <template>
-  <HelloWorld />
+  <GameView />
 </template>

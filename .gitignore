@@ -1,6 +1,6 @@
 # Rust (back/)
 back/target/
-back/Cargo.lock
+# Cargo.lock est versionné : back/ produit un binaire, pas une lib.
 
 # Node (front/)
 front/node_modules/

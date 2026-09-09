@@ -100,7 +100,14 @@ export function useGame() {
 
   /** Soumet la saisie courante au backend. */
   async function valider(): Promise<void> {
-    if (!peutValider.value) return
+    if (!enCours.value || envoiEnCours.value) return
+
+    if (saisie.value.length < longueur.value) {
+      const message = 'Le mot est incomplet'
+      erreur.value = message
+      window.alert(message)
+      return
+    }
 
     envoiEnCours.value = true
     erreur.value = null
@@ -121,7 +128,7 @@ export function useGame() {
         saisie.value = premiereLettre.value
       }
     } catch (e) {
-      // 422 (mot inconnu / mauvaise longueur) : on garde la saisie pour corriger.
+      // 422 (mot inconnu / mauvaise longueur)
       erreur.value = messageDErreur(e, "Échec de l'envoi de l'essai")
     } finally {
       envoiEnCours.value = false

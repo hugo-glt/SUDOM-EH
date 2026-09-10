@@ -53,7 +53,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
 
       <p class="h-6 text-sm">
         <span v-if="erreur" class="font-medium text-red-600">{{ erreur }}</span>
-        <span v-else-if="phase === 'gagne'" class="font-semibold text-red-600">
+        <span v-else-if="phase === 'gagne'" class="font-semibold text-green-600">
           Gagné en {{ tentatives.length }} essai(s) !
         </span>
         <span v-else-if="phase === 'perdu'" class="font-medium text-slate-700">
